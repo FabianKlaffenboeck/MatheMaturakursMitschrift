@@ -1,0 +1,82 @@
+\newpage
+\section{Funktionen}
+
+Eine Funktion ist eine Formel mit der man sich für jeden beliebigen $x$ Wert in einem Koordinatensytem einen entsprechenden $y$ Wert errechnen kann.\\
+Eine Funktion weist einem unabhängigen Wert ($x$) genau einen abhängigen Wert ($y$) zu.\\
+
+\hfill \break
+Thermologie:\\
+\begin{itemize}
+    \item Ein Beispiel für einen Funktionsterm ist: $f(x) = 5x+10$
+    \item Bei der Funktionen: $f(x) = 5x+10$ bezeichnet $x$ das Funktionsargument,
+\end{itemize}
+
+\hfill \break
+die Funktion $y=2x-1$ kann als Wertetabelle...:\\
+\fboxrule=0.8pt \fcolorbox{lightgray}{lightgray}{%
+    \begin{tabular}{c|c}
+        $x$ & $y$ \\
+        \hline
+        0   & -1  \\
+        1   & 1   \\
+        2   & 3   \\
+        3   & 5   \\
+        4   & 7   \\
+    \end{tabular}}\\
+
+\hfill \break
+...und graphisch dargestellt erden:\\
+\begin{tikzpicture}[scale=1.0]
+    \begin{axis}%
+        [
+            grid=major,
+            xtick={-7,-6,...,7},
+            minor x tick num=4, % 4 minor ticks => 5 subintervals
+            xmin=-6,
+            xmax=6,
+            xlabel={\scriptsize $x$},
+            axis x line=middle,
+            ytick={-5,-4,...,5},
+            minor y tick num=4,  % 4 minor ticks => 5 subintervals
+            ymin=-3,
+            ymax=4,
+            ylabel={\scriptsize $f(x)$},
+            axis y line=middle,
+            no markers,
+            samples=100,
+            domain=-6:6,
+        ]
+        \addplot (x,{2*x-1});
+    \end{axis}
+\end{tikzpicture}
+
+\break
+\input{Topics/Funktionen/SubTopics/Zusammenfassung}
+\break
+\input{Topics/Funktionen/SubTopics/Steigung}
+\break
+\input{Topics/Funktionen/SubTopics/Einteilung}
+\break
+\input{Topics/Funktionen/SubTopics/LineareFunktionen}
+\break
+\input{Topics/Funktionen/SubTopics/LineareFunktionenMit2Variablen}
+\break
+\input{Topics/Funktionen/SubTopics/Funktionsgleichung}
+\break
+\input{Topics/Funktionen/SubTopics/Kostenfunktion}
+\break
+\input{Topics/Funktionen/SubTopics/NormaleParalelleFunktionen}
+\break
+\input{Topics/Funktionen/SubTopics/FunktionsWerte}
+\break
+\input{Topics/Funktionen/SubTopics/QuadratischeFunktionen}
+\break
+\input{Topics/Funktionen/SubTopics/Nullstellenberechnung}
+\break
+\input{Topics/Funktionen/SubTopics/FunktionenAufstellen}
+\break
+\input{Topics/Funktionen/SubTopics/Exponentialfunktionen}
+\break
+\input{Topics/Funktionen/SubTopics/Potenzfunktionen}
+\break
+\input{Topics/Funktionen/SubTopics/UmkehrFunktionen}

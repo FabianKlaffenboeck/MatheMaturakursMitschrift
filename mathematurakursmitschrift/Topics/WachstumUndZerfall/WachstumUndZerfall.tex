@@ -1,0 +1,44 @@
+\newpage
+\section{Wachstum und Zerfall}
+
+
+\hfill \break
+Algemeines:
+$$f(x) = c*a^x$$
+$$\textcolor{red}{N(t)} = \textcolor{blue}{N_0}*\textcolor{green}{a}^t$$
+
+\begin{itemize}
+    \item \textcolor{red}{$N(t)$}: Die Menge die zum Zeitpunkt t (noch) vorhanden ist.
+    \item \textcolor{blue}{$N_0$}: Anfangsmenge oder Startwert.
+    \item \textcolor{green}{$a$}: Wachstumes-Zerfallsfaktor.
+    \item bei $a>1$ ist es ein Zuwachs
+    \item bei $0<a<1$ ist es ein Verfall
+\end{itemize}
+
+
+\hfill \break
+Umrechnung zwischen Funktionstypen:
+$$N(t) = \textcolor{blue}{2}*\textcolor{red}{1.03}^t  \longrightarrow  N(t) = \textcolor{blue}{16}*\textcolor{red}{e^\lambda}^t$$
+
+$$\fboxrule=0.8pt \fcolorbox{black}{lightgray}{%
+        \begin{tabular}[t]{@{}l@{}}
+            $1.03 = e^\lambda$ | /Ln      \\
+            $Ln(1.03) = \lambda * L_e(e)$ \\
+            $\lambda = 0.02855...$        \\
+            $N(t) = 2*e^0.02855...$       \\
+        \end{tabular}}$$
+
+
+\hfill \break
+Thermologie:
+\begin{itemize}
+    \item Halbwertszeit: Ist jene Zeit t, die vergehen muss bis nur noch die Hälfte des Anfangswetes vorhanden ist.
+    \item Verdopplungszeit: Ist jene Zeit t, die vergehen muss bis das Doppelte des Anfangswetes vorhanden ist.
+\end{itemize}
+
+\break
+\input{Topics/WachstumUndZerfall/SubTopics/Modelle}
+\break
+\input{Topics/WachstumUndZerfall/SubTopics/LinearesModell}
+\break
+\input{Topics/WachstumUndZerfall/SubTopics/ExponentiellesModell}

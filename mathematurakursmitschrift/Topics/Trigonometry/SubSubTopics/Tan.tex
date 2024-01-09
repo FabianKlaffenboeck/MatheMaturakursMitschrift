@@ -1,0 +1,47 @@
+\newpage
+\subsubsection{Die Tangens Funktion}
+
+\begin{itemize}
+    \item $tan(deg(x))$
+    \item Tangens ist ein Sonderfall bezüglich des Vorzeichens.
+\end{itemize}
+
+
+\hfill \break
+Die Wertetabelle und Graphik zu $tan(deg(x))$:\\
+\fboxrule=0.8pt \fcolorbox{lightgray}{lightgray}{%
+    \begin{tabular}{c|c}
+        $x$               & $y$ \\
+        \hline
+        $0$               & 0   \\
+        $\frac{\pi}{2}$   & n.d.   \\
+        $\pi$             & 0   \\
+        $\frac{3*\pi}{2}$ & n.d.   \\
+        $2*\pi$           & 0   \\
+    \end{tabular}}\\
+
+
+\hfill \break
+\begin{tikzpicture}[scale=1]
+    \begin{axis}%
+        [
+            grid=major,
+            xtick={-1,0,...,10},
+            minor x tick num=4,
+            xmin=-1,
+            xmax=10,
+            xlabel={\scriptsize $x$},
+            axis x line=middle,
+            ytick={-2,-4,...,2},
+            minor y tick num=4,
+            ymin=-2,
+            ymax=2,
+            ylabel={\scriptsize $f(x)$},
+            axis y line=middle,
+            no markers,
+            samples=100,
+            domain=-1:10,
+        ]
+        \addplot[blue] (x,{tan(deg(x))});
+    \end{axis}
+\end{tikzpicture}

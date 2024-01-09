@@ -1,0 +1,40 @@
+\subsubsection{Amplitude}
+
+\hfill \break
+Die Amplitude beschreibt die Streckung bez Stauchung entlang der $y$ Achse.
+Das bedeuted das die Steigung der Funktion sinkt oder steigt.
+
+\hfill \break
+\begin{itemize}
+    \item Grund-Sin Funktion $\rightarrow$ \textcolor{red}{$sin(deg(x))$}
+    \item Erhöhung der Amplitude $\rightarrow$ \textcolor{green}{$2*sin(deg(x))$}
+    \item Verminderung der Amplitude $\rightarrow$ \textcolor{blue}{$0.5*sin(deg(x))$}
+\end{itemize}
+
+
+\hfill \break
+\begin{tikzpicture}[scale=1]
+    \begin{axis}%
+        [
+            grid=major,
+            xtick={-1,0,...,10},
+            minor x tick num=4,
+            xmin=-1,
+            xmax=10,
+            xlabel={\scriptsize $x$},
+            axis x line=middle,
+            ytick={-2,-4,...,2},
+            minor y tick num=4,
+            ymin=-2,
+            ymax=2,
+            ylabel={\scriptsize $y$},
+            axis y line=middle,
+            no markers,
+            samples=100,
+            domain=-1:10,
+        ]
+        \addplot[red] (x,{sin(deg(x))});
+        \addplot[green] (x,{2*sin(deg(x))});
+        \addplot[blue] (x,{0.5*sin(deg(x))});
+    \end{axis}
+\end{tikzpicture}

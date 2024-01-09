@@ -1,0 +1,14 @@
+stages:
+  - build
+
+build:
+  image: registry.gitlab.com/islandoftex/images/texlive:latest
+  stage: build
+  script:
+    - pdflatex Mitschrift.tex
+    - pdflatex Mitschrift.tex
+  after_script:
+    - cat Mitschrift.log
+  artifacts:
+    paths:
+      - Mitschrift.pdf

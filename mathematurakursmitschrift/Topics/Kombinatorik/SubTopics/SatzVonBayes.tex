@@ -1,0 +1,26 @@
+\subsection{Satz von Bayes}
+
+Ereigniss A und B
+
+\hfill \break
+\begin{forest}
+    for tree={calign=fixed edge angles,l=50, delay={edge label/.wrap value={node[midway,  auto]{#1}}}}
+    [
+    [$A$, edge label=$P(A)$ [$B$, edge label=$P(A/B)$] [$\lnot B$, edge label=$P(A/B)$]]
+        [$\lnot A$, edge label=$P(\lnot A)$ [$B$, edge label=$P(A/B)$] [$\lnot B$, edge label=$P(A/B)$]]
+    ]
+\end{forest}
+
+
+\hfill \break
+Bedinkte Wahrscheinlichkeit:\\
+$P(\textrm{A und B}) = P(A \cap B)$\\
+$P(A \cap B) = P(B)*P(A/B)$\\
+$P(A \cap B) = \frac{P(A \cap B)}{P(B)}$\\
+
+\hfill \break
+Satz von Bayes: $P(A/B) = \frac{P(A)*P(B/A)}{P(B)}$
+
+
+\hfill \break
+Der Satz von Bayes besagt die Wahrscheinlichkeit bon B unter der Wahrscheinlichkeit von A.

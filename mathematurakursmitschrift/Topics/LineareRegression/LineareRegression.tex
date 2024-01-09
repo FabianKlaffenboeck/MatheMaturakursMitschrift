@@ -1,0 +1,62 @@
+\newpage
+\section{Lineare regression}
+
+Mit Hilfe einer Regression können aus Messwerten Zusammenhänge (Korrelationen) gefunden werden.
+Dazu braucht man (mindestens) zwei Größen, zwischen welchen ein Zusammenhang vermutet wird, und geeignete Wertepaare.
+
+\hfill \break
+Beispiel:\\
+Es kann von jedem Teilnehmer eines BRP-Kurses die Entfernung seines Wohnortes vom Kursort (Liste 1) und die Zeit (Liste 2), die er dafür benötigt, notiert werden.
+Man kann vermuten, dass zwischen diesem Weg und dieser Zeit ein Zusammenhang besteht.
+
+\hfill \break
+Taschenrechner:\\
+\begin{itemize}
+    \item Stat 
+    \item $\rightarrow$
+    \item Edit
+    \item Liste L1 und L2 eingeben 
+    \item Stat 
+    \item $\rightarrow$
+    \item Calc
+    \item Linreg: L1,L2
+\end{itemize}
+
+\newpage
+\hfill \break
+Wie gut passt ein lineares Modell?\\
+Für eine lineare Regression gibt es eine Größe, die angibt, wie gut das Lineare Modell passt.
+Das ist der Korrelationskoeffizient (nach Pearson) r.
+Sein Wert liegt immer zwischen -1 und 1. Er gibt an, ob ein linearer Zusammenhang vermutet werden kann, besteht oder eher ausgeschlossen werden kann.
+Ob die Größen einander wirklich beeinflussen, kann aber nie mit Sicherheit bestimmt werden.
+
+\hfill \break
+\begin{itemize}
+    \item $|r|\approx 1$ Ist der Betrag des Korrelationskoeffizienten nahe bei 1, so passt das lineare Modell sehr gut.
+    \item $|r|\approx 0$ Ist der Korrelationskoeffizient sehr klein, nahe bei 0, so liegt vermutlich kein linearer Zusammenhang vor.
+    \item $r > 0$ Ist der Korrelationskoeffizient positiv, so ist die Trendgerade steigend. Man spricht von einer positiven Korrelation.
+    Wenn der Wert einer Größe zunimmt, so steigt auch der Wert der anderen Größe. (z.B.: Wer eine längere Strecke zurücklegen muss, braucht auch mehr Zeit.)
+    \item Ist der Korrelationskoeffizient negativ, so ist die Trendgerade fallend. Man spricht von einer negativen Korrelation.
+    Wenn der Wert einer Größe zunimmt, so sinkt der Wert der anderen Größe. (z.B.: Wenn der Preis eines Produktes steigt, so wird die verkaufte Menge sinken.)
+    \item $r = 1$ oder $r=0$ Erreicht der Korrelationskoeffizient die Werte 1 oder -1 exakt, so handelt es sich um eine vollkommene Korrelation.
+    Das heißt, dass man nicht eine möglichst gute Gerade gefunden hat, sondern dass alle Punkte exakt auf dieser Geraden liegen.
+\end{itemize}
+
+\hfill \break
+Am Taschenrechner erhält man den Korrelationskoeffizienten automatisch bei der Berechnung der linearen Regression, wenn er aktiviert wurde.
+Um dies zu tun braucht man aus dem Catalog (2nd: 0) den Befehl DiagnosticOn.
+Wird dieser ausgewählt und mit Enter bestätigt, wird in weiterer Folge immer der Korrelationskoeffizient automatisch mitberechnet.
+(Auch wenn der Taschenrechner zwischendurch ausgeschaltet wird, bleibt die Aktivierung erhalten.)
+
+
+\newpage
+\hfill \break
+Gibt es nur lineare Trendlinien?\\
+Als Modelle für Regressionen eignen sich verschieden Funktionstypen.
+Zur Anwendung kommen insbesondere Polynomfunktionen bis zum Grad 4 und Logarithmus- und Exponentialfunktionen.
+Den Korrelationskoeffizienten nach Pearson gibt es allerdings nur bei einer linearen Regression.
+
+\hfill \break
+Hier sieht man verschiedene Trendlinien für die gleichen Wertepaare.
+Zuerst wurde eine Polynomfunktion 3. Grades als Modell gewählt.
+Anschließend eine Exponentialfunktion und zum Schluss eine Logarithmusfunktion.

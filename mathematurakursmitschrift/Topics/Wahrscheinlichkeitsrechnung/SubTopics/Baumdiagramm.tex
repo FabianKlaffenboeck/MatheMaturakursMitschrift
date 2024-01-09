@@ -1,0 +1,41 @@
+\newpage
+\subsection{Baumdiagramm}
+
+
+\hfill \break
+\input{Topics/Wahrscheinlichkeitsrechnung/SubSubTopics/2xWerfenEinerMünzeBaumdiagram}
+
+\hfill \break
+\input{Topics/Wahrscheinlichkeitsrechnung/SubSubTopics/ZiehenOhneZuruecklegen}
+
+\hfill \break
+Praktisches Beispiel:\\
+Ein Kaufhaus bezieht Hemden von drei verschiedenen Firmen. Von 3000 Stück stammen 900 von der Firma A, 1500 von
+der Firma Bund der Rest von der Firma C. Statistische Untersuchungen haben ergeben, dass Waren der Firma A mit
+einer Wahrscheinlichkeit von $10\%$, der Firma B mit $20\%$ und der Firma C mit $15\%$ fehlerhaft sind.
+\begin{enumerate}
+    \item Wie viel Stück der gelieferten Hemden sind fehlerhaft
+    \item Das Hemd, das gekauft wurde, ist in Ordnung. Mit welcher Wahrscheinlichkeit wurde es von der Firma B erzeugt?
+    \item Wie viel Stück müssen bei einer Qualitätskontrolle geprüft werden, damit mit einer Wahrscheinlichkeit von wenigstens $90\%$ mindestens ein fehlerhaftes Stück dabei ist?
+\end{enumerate}
+
+
+\hfill \break
+Baumdiagram:\\
+\begin{forest}
+    for tree={l=50, delay={edge label/.wrap value={node[midway, font=\sffamily\scriptsize, auto]{#1}}}}
+    [Hemden
+        [A, edge label=$\frac{3}{10}$ [$f$, edge label=$0.1$][$\lnot f$, edge label=$0.9$]]
+        [B, edge label=$\frac{1}{2}$ [$f$, edge label=$0.2$][$\lnot f$, edge label=$0.8$]]
+        [C, edge label=$\frac{1}{5}$ [$f$, edge label=$0.15$][$\lnot f$, edge label=$0.85$]]
+    ]
+\end{forest}
+
+
+\hfill \break
+Example Lösung:\\
+\begin{enumerate}
+    \item $P(f) = 0.3*0.1+0.5+0.2+0.2+0.2*0.15=0.16 \longrightarrow 3000/0.16 = 480$ Stück sind fehlerhaft.
+    \item $P(\textrm{OK und Firma B}) = 0.5*0.8=0.4 = 40\%$
+    \item $P(\textrm{bin 1 fehlerhafzes}) = 1-P(\textrm{kein fehlerhaftes}\geq 0.9)$\\ Rechenweg: $1-0.84^n \geq 0.9 \rightarrow 0.1 \geq 0.85^n \rightarrow \frac{ln(0.1)}{ln(0.85)} \leq n \rightarrow 13.2 \leq n$
+\end{enumerate}

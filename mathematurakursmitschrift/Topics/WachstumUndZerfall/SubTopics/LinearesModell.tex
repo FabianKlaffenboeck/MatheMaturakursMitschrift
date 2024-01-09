@@ -1,0 +1,78 @@
+\newpage
+\subsection{Lineares Modell}
+
+\subsubsection{Wachstum}
+\hfill \break
+Es Ligen 25€ am Spaarbuch. Jede Woche werdern 5€ angespaart.
+\hfill \break
+$K(t)=\textcolor{red}{5}t+\textcolor{blue}{25}$
+
+\begin{itemize}
+    \item \textcolor{red}{5}: Zuanhme pro Woche (Konstant)
+    \item \textcolor{blue}{25}: Startwert
+\end{itemize}
+
+\hfill \break
+Darstellung:\\
+\begin{tikzpicture}[scale=1.0]
+    \begin{axis}%
+        [
+            grid=major,
+            xtick={0,1,...,7},
+            minor x tick num=4, % 4 minor ticks => 5 subintervals
+            xmin=-1,
+            xmax=6,
+            xlabel={\scriptsize $x$},
+            axis x line=middle,
+            ytick={20,25,...,50},
+            minor y tick num=4,  % 4 minor ticks => 5 subintervals
+            ymin=20,
+            ymax=50,
+            ylabel={\scriptsize $f(x)$},
+            axis y line=middle,
+            no markers,
+            samples=100,
+            domain=-6:6,
+        ]
+        \addplot[blue] (x,{5*x+25});
+    \end{axis}
+\end{tikzpicture}
+
+\newpage
+\subsubsection{Zerfall}
+
+\hfill \break
+Es Ligen 90€ auf einem Spaarbuch. Jede Woche werdern 5€ angehoben.
+\hfill \break
+$K(t)=\textcolor{red}{-5}t+\textcolor{blue}{90}$
+
+\begin{itemize}
+    \item \textcolor{red}{5}: Abnahme pro Woche (Konstant)
+    \item \textcolor{blue}{25}: Startwert
+\end{itemize}
+
+\hfill \break
+Darstellung:\\
+\begin{tikzpicture}[scale=1.0]
+    \begin{axis}%
+        [
+            grid=major,
+            xtick={0,1,...,7},
+            minor x tick num=4, % 4 minor ticks => 5 subintervals
+            xmin=-1,
+            xmax=6,
+            xlabel={\scriptsize $x$},
+            axis x line=middle,
+            ytick={20,40,...,100},
+            minor y tick num=4,  % 4 minor ticks => 5 subintervals
+            ymin=20,
+            ymax=100,
+            ylabel={\scriptsize $f(x)$},
+            axis y line=middle,
+            no markers,
+            samples=100,
+            domain=-6:6,
+        ]
+        \addplot[blue] (x,{-5*x+90});
+    \end{axis}
+\end{tikzpicture}

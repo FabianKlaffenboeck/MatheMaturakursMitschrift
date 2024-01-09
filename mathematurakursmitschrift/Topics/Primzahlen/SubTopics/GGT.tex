@@ -1,0 +1,17 @@
+\newpage
+\subsection{Größter gemeinsamer Teiler (ggt)}
+
+Das GGT wird mittles Primfaktorzerlegung ermittelt.\\
+Die Zahlen die in beiden Zerlegungen vorhanden sind werden Zusammen-multipliziert.\\
+
+\hfill \break
+Example: Ermittling des ggt von 36 und 60\\
+\fboxrule=0.8pt \fcolorbox{lightgray}{lightgray}{%
+    \begin{tabular}{ c|c||c|c}
+        36 & \textcolor{red}{2}   & 60 & \textcolor{red}{2}   \\
+        18 & \textcolor{green}{2} & 30 & \textcolor{green}{2} \\
+        9  & \textcolor{blue}{3}  & 15 & \textcolor{blue}{3}  \\
+        3  & 3                    & 5  & 5                    \\
+        1  &                      & 1  &                      \\
+    \end{tabular}}
+$ggt(36,60) = \textcolor{red}{2}*\textcolor{green}{2}*\textcolor{blue}{3} = 12$

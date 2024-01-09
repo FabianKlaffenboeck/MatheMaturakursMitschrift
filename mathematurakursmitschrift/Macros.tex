@@ -1,0 +1,43 @@
+%%% START MACRO %%%
+\newcommand{\slopeTriangle}[5]
+{
+    % #1. Relative offset in x direction.
+    % #2. Width in x direction, so xA-xB.
+    % #3. Relative offset in y direction.
+    % #4. Slope dydx.
+    % #5. Plot options.
+
+    \pgfplotsextra
+    {
+        \pgfkeysgetvalue{/pgfplots/xmin}{\xmin}
+        \pgfkeysgetvalue{/pgfplots/xmax}{\xmax}
+        \pgfkeysgetvalue{/pgfplots/ymin}{\ymin}
+        \pgfkeysgetvalue{/pgfplots/ymax}{\ymax} 
+
+        % Calculate auxilliary quantities.
+        \pgfmathsetmacro{\xA}{\xmin+(#1+#2)*(\xmax-\xmin)}
+        \pgfmathsetmacro{\yA}{\ymin+#3*(\ymax-\ymin)}
+        \pgfmathsetmacro{\xB}{\xmin+#1*(\xmax-\xmin)}
+        \pgfmathsetmacro{\yB}{\yA}
+        \pgfmathsetmacro{\xC}{\xA}
+        \pgfmathsetmacro{\yC}{\yA+(\xA-\xB)*#4}
+
+        % Define coordinates for \draw.
+        \coordinate (A) at (axis cs:\xA,\yA);
+        \coordinate (B) at (axis cs:\xB,\yB);
+        \coordinate (C) at (axis cs:\xC,\yC);
+
+        % Draw slope triangle.
+        \draw[#5]   (A)-- node[pos=0.5,anchor=north] {1}
+                    (B)-- 
+                    (C)-- node[pos=0.5,anchor=west] {#4}
+                    cycle;
+    }
+}
+
+
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}%
+}
+
+%%% END MACRO %%%
