@@ -1,0 +1,19 @@
+\subsubsection{Ziehen ohne zurücklegen}
+
+2x ziehen ohne zurücklegen
+
+\hfill \break
+\begin{forest}
+    for tree={l=50, delay={edge label/.wrap value={node[midway,  auto]{#1}}}}
+    [3 Weiß und 2 Schwarz
+        [Weiß, edge label=$\frac{3}{5}$ [Weiß, edge label=$\frac{2}{4}$] [Schwarz, edge label=$\frac{2}{4}$]]
+        [Schwarz, edge label=$\frac{2}{5}$ [Weiß, edge label=$\frac{3}{4}$] [Schwarz, edge label=$\frac{1}{4}$]]
+    ]
+\end{forest}
+
+\hfill \break
+\begin{itemize}
+    \item $P(W,S) = \frac{3}{5}*\frac{2}{4} = \frac{1}{5} = 30\%$
+    \item $P(W,W) = \frac{3}{5}*\frac{2}{4} = \frac{1}{5} = 30\%$
+    \item $P(S,S) = \frac{2}{5}*\frac{1}{4} = \frac{1}{10} = 10\%$
+\end{itemize}

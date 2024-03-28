@@ -1,0 +1,22 @@
+\subsubsection{Wie oft mindestens würfeln}
+
+\hfill \break
+Wie oft mus man mindestens würfeln, um mit mindestens $95\%$ Wahrscheinlichkeit mindestens einen 6er zu würfeln?\\
+$P(6er) = \frac{1}{6}$\\
+$P(x*6er) = \frac{1}{6}^x$\\
+$\lnot P(6er) = \frac{5}{6}$\\
+
+\hfill \break
+$x..$ = Anzahl der 6er
+
+\hfill \break
+\fboxrule=0.8pt \fcolorbox{black}{lightgray}{%
+    \begin{tabular}[t]{@{}l@{}}
+
+        $1-(\frac{5}{6})^n \geq 0.95$                                                          \\
+        $0.25 \geq (\frac{5}{6})^n$ /  *ln   durch das teilen dreht sich das $\geq$ Zeichen um \\
+        $ln(0.05) \geq ln(\frac{5}{6})^n$                                                      \\
+        $ln(0.05) \geq n*\frac{5}{6}$ / $\div\frac{5}{6} $                                     \\
+        $\frac{ln(0.05)}{ln(\frac{5}{6})} \leq n $                                             \\
+        $16.43 \leq n$                                                                         \\
+    \end{tabular}}

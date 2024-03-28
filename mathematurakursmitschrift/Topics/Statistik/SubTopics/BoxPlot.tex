@@ -1,0 +1,35 @@
+\newpage
+\subsection{Box Plot}
+
+In einem Wald wurden die Stammumfänge von 120 Bäumen vermessen (Umfang in cm). Die Daten sind hier in Form eines Diagramms dargestellt.
+
+\hfill \break
+\begin{center}
+\resizebox{10cm}{5cm}{%
+    \begin{tikzpicture}
+        \begin{axis}
+            [
+                ytick={1},
+                yticklabels={},
+            ]
+            \addplot+[
+                boxplot prepared={
+                        median=48,
+                        upper quartile=60,
+                        lower quartile=45,
+                        upper whisker=67,
+                        lower whisker=30
+                    },
+            ] coordinates {};
+        \end{axis}
+    \end{tikzpicture}
+}
+
+\hfill \break
+\begin{itemize}
+    \item ca. $75\%$ der Bäume einen Stammumfang kleiner als 60cm haben.
+    \item alle Bäume einen Stammumfang von höchstens 67cm haben.
+    \item von den 120 Bäumen ca. 3O einen Stammumfang von höchstens 45cm haben.
+    \item ca.: 60 Bäume einen Stammumfang von 45 bis 60 cm haben
+\end{itemize}
+\end{center}

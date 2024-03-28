@@ -1,0 +1,37 @@
+\newpage
+\subsection{Erwartungswert}
+
+
+Am Beispiel des Würfeln eines Würfels:\\
+
+\begin{itemize}
+    \item $n=1800$
+    \item $P(\sigma) = \frac{1}{6}$
+    \item $P(\lnot 6) = \frac{5}{6}$
+\end{itemize}
+
+Der Erwartungswert kann mit der Formel $E(x)=1800 * \frac{1}{6} = 300$\\
+$\sigma = \sqrt{1800*\frac{1}{6}*\frac{5}{6}} = 15.8 \simeq 16$
+
+\hfill \break
+Struebereich: $300 \pm 16 = \left[285,316\right]$
+
+\hfill \break
+Der Bereich um $\mu$ (MU) ist der Streubereich, es kann erwarted werden das im Bereich $\left[285,316\right]$ ein 6er gefunden wird.
+
+\hfill \break
+\begin{itemize}
+    \item $\sigma_1 = 285$
+    \item $\sigma_2 = 316$
+\end{itemize}
+
+\hfill \break
+\begin{tikzpicture}
+    \begin{axis}[every axis plot post/.append style={
+                    mark=none,domain=250:350,samples=50,smooth},
+            axis x line*=bottom,
+            axis y line*=left,
+            enlargelimits=upper]
+        \addplot {gauss(300,16)};
+    \end{axis}
+\end{tikzpicture}

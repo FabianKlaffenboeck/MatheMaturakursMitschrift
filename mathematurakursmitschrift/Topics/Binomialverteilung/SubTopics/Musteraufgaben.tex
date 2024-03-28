@@ -1,0 +1,43 @@
+\subsection{Musteraufgaben}
+
+\hfill \break
+Bei einem Glücksspiel beträgt die Gewinnwahrscheinlichkeit $37.5\%$. Wie groß ist die Wahrscheinlichkeit, dass unter $20$ Spielen...
+\begin{enumerate}
+    \item mindestens zwei Gewinne
+    \item genau vier Gewinne
+    \item höchstens vier Gewinne
+    \item zwischen fünf und sieben Gewinne erzielt werden?
+    \item Wie oft müsste man spielen, dass die Wahrscheinlichkeit, mindestens einmal zu gewinnen, $95\%$ übersteigt?
+\end{enumerate}
+
+\hfill \break
+x... Anzahl der Gewinne.\\
+$x=0,1,2,3,4,...,20$\\
+$P(G) = 0.375$\\
+$n=20$\\
+
+Rechnen mit dem TR: 2nd Vars $\uparrow$ A:binomcdf\\
+binomcdf(\textcolor{red}{n},\textcolor{green}{p},\textcolor{blue}{k})\\
+
+\hfill \break
+\begin{enumerate}
+    \item \begin{align*}
+              P(x\geq 2) & = 1- (P(x=0)+P(x=1))                     \\
+                         & = 1- P(x \leq 1)                         \\
+                         & = 1- binomcdf(20,0.375,2) = 0.9984246652 \\
+          \end{align*}
+    \item $P(x=4) = binompdf(20,0.375,4) = 0.0579$
+    \item $P(x \leq 4) = binomcdf(20,0.375,4) = 0.079$
+    \item $P(5 \leq x \leq 7) = P(x \leq 7) - P(x \leq 4) = binomcdf(20,0.375,4)-binomcdf(20,0.375,7) = 0.4288$
+    \item $n=?$\\
+          \begin{align*}
+              P(x\geq 2) & = 1- P(x=0) > 0.95                           \\
+                         & = 1- \binom{n}{0} * 0.375^0 * 0.625^n > 0.95 \\
+                         & = 1 - 0.625^n > 0.95                         \\
+          \end{align*}
+          \\
+          $0.05>0.625^n$                                              \\
+          $ln(0.05) > n * ln(0.625)$                                  \\
+          $\frac{ln(0.05)}{ln(0.625)} < n$                            \\
+          $6.37 < n$                                                  \\
+\end{enumerate}

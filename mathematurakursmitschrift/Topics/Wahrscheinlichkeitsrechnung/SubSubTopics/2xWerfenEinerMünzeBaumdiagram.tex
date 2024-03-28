@@ -1,0 +1,19 @@
+\subsubsection{Baumdiagram von zweimaligem werfen einer Münze}
+
+2x werfen einer Münze
+
+\hfill \break
+\begin{forest}
+    for tree={l=50, delay={edge label/.wrap value={node[midway, font=\sffamily\scriptsize, auto]{#1}}}}
+    [Erster Münzwurf
+    [Kopf, edge label=$\frac{1}{2}$ [Kopf, edge label=$\frac{1}{2}$] [Zah, edge label=$\frac{1}{2}$]]
+    [Zahl, edge label=$\frac{1}{2}$ [Kopf, edge label=$\frac{1}{2}$] [Zah, edge label=$\frac{1}{2}$]]
+    ]
+\end{forest}
+
+
+\hfill \break
+\begin{enumerate}
+    \item $P(K,Z) = \frac{1}{2}* \frac{1}{2} =  \frac{1}{4} = 25\%$
+    \item $P((K,Z),(Z,K)) = \frac{1}{2}* \frac{1}{2} +\frac{1}{2}* \frac{1}{2} =  \frac{1}{4}+\frac{1}{4} = \frac{1}{2} = 50\%$
+\end{enumerate}

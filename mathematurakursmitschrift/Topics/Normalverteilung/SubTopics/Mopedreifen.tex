@@ -1,0 +1,25 @@
+\subsection{Mopedreifen}
+
+\hfill \break
+Die Profilteile von Mopedreifen ist erfahrungsgemäß normalverteilt mit Mittelwert 2,7mm und
+einer Standardabweichung von 0,8mm. Wie groß ist die Wahrscheinlichkeit, dass die Profiltiefe der
+Reifen eines zufällig angehaltenen Mopeds
+\begin{enumerate}
+    \item unter $2.1$mm
+    \item über $3.5$mm
+    \item zwischen $2.5$mm und $3.1$mm liegt?
+    \item In welchem Bereich liegt mit Wahrscheinlichkeit von $90\%$ die Profiltiefe dieser Moped reifen?
+\end{enumerate}
+
+\hfill \break
+Rechnungen:\\
+x... Profilteile eines Mopeds\\
+\begin{enumerate}
+    \item $P(x \leq 2.1)$:: normalcdf($-E_{99},2.1,2.7,0.8$) = $0.227 \simeq 22.7\%$
+    \item $P(x \geq 3.5)$:: normalcdf($3.5,E_{99},2.7,0.8$) = $0.1586 \simeq 15.9\%$
+    \item $P(2.5 \leq 3.1)$:: normalcdf($2.5,3.1,2.7,0.8$) = $0.2907 \simeq 29\%$
+    \item \begin{itemize}
+              \item a: invNorm($0.05,2.7,0.8$) = $1.384$
+              \item b: invNorm($0.95,2.7,0.8$) = $4.016$
+          \end{itemize} $\Rightarrow  [1.384;4.016]$
+\end{enumerate}

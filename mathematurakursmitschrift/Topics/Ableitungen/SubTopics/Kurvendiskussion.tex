@@ -1,0 +1,42 @@
+\newpage
+\subsection{Musterbeispiel für eine vollständige Kurvendiskussion}
+
+Gegeben ist eine Funktion $f(x)=x^3-3x+1$ Führe eine vollständige Diskussion der Funktion durch.\\
+
+\begin{enumerate}
+    \item Die Funktion und ihre Ableitungen: \begin{itemize}
+              \item $f(x)=x^3-3x+1$
+              \item $f'(x) = 3x^2-3$
+              \item $f''(x) = 6x$
+          \end{itemize}
+    \item Nullstellen ermitteln: $f(x)=0$ \begin{itemize}
+              \item $x^3-3x+1=0$
+              \item Zur Berechnung gibt es zwei Möglichkeiten mit dem TR: \begin{enumerate}
+                        \item grafisch: $y1$ in die Liste eingeben 2nd - calc - zero ; Cursor links und rechts setzen und jeweils  mit ENTER bestätigen.\\ $N_1(-1,88|0)$; $N_2(0.35|0)$; $N_3(1.53|0)$;
+                        \item SOLVER: Math - 0 - $\uparrow$ eqn: $0=x^3-3x+1$ ENTER x = Startwert eingeben (-10, 0, 10; auf Verdacht probieren) bzw. eventuell Tabelle 2nd - table nützen 
+                    \end{enumerate}
+          \end{itemize}
+    \item Extremstellen berechnen: \begin{itemize}
+        \item $f'(x)=0$
+        \item $f''(x) < 0$ = Hochpunkt
+        \item $f''(x) > 0$ = Tiefpunkt
+        \item $3x^2-3=0$ $\rightarrow$ $3x^2=3$ $\rightarrow$ $x^2=1$ $\rightarrow$ $x = \pm 1$
+        \item $f''(-1)<0$ $\rightarrow$ $f(-1)=3$ $\rightarrow$ Hochpunkt $H(-1|3)$
+        \item $f''(1)>0$ $\rightarrow$ $f(1)=-1$ $\rightarrow$ Tiefpunkt $T(1|-1)$
+    \end{itemize}
+    \item Wendepunkt berechnen: $f''(x)=0$ \begin{itemize}
+        \item $6x=0$
+        \item $x=0$
+        \item $f(0)=1$ Wendepunkt $W(0|1)$
+    \end{itemize}
+    \item Wendetangente berechnen: $t_w:y=kx+d$ \begin{itemize}
+        \item $k=f'(0)=-3$
+        \item $t_w:y=kx+d$
+        \item $W(0|1)$ in y = $-3x+d$ einsetzen 
+        \item $1=-3*0+d$
+        \item $d=1$
+        \item $t_w:y=-3x+1$
+    \end{itemize}
+\end{enumerate}
+
+

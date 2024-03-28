@@ -1,0 +1,68 @@
+\newpage
+\subsection{Vermessungsaufgaben}
+
+
+\hfill \break
+\begin{tikzpicture}[scale=1]
+    \begin{axis}%
+        [
+            grid=major,
+            xtick={0,10,...,100},
+            minor x tick num=4,
+            xmin=0,
+            xmax=100,
+            xlabel={\scriptsize $x$},
+            axis x line=middle,
+            ytick={0,10,...,100},
+            minor y tick num=4,
+            ymin=0,
+            ymax=100,
+            ylabel={\scriptsize $y$},
+            axis y line=middle,
+            no markers,
+            samples=100,
+            domain=-1:10,
+        ]
+
+        \draw[color=blue] (50,20) -- (50,90);
+        \draw[color=blue] (20,10) -- (20,80);
+        \draw[color=blue] (80,10) -- (80,80);
+        \draw[color=green] (80,80) -- (50,90);
+        \draw[color=green] (80,10) -- (50,20);
+        \draw[color=green] (80,10) -- (50,90);
+        \draw[color=red] (20,80) -- (50,90);
+        \draw[color=red] (20,10) -- (50,20);
+        \draw[color=red] (20,10) -- (50,90);
+
+        \node[color=green,rotate=-65] at (67,52) {Sehstrahl nach $B$};
+        \node[color=red,rotate=65] at (33,52) {Sehstrahl nach $A$};
+
+        \node[color=red] at (25,15) {$\alpha$};
+        \node[color=green] at (75,15) {$\beta$};
+        \node[color=red] at (45,85) {$\alpha$};
+        \node[color=green] at (55,85) {$\beta$};
+
+        \node[color=red] at (50,10) {$\gamma$};
+        \node[color=green] at (50,70) {$\delta$};
+        \node[color=blue] at (15,8) {$A$};
+        \node[color=blue] at (85,8) {$B$};
+        \node[color=blue] at (50,95) {$S$};
+        \node[color=blue] at (50,15) {$I$};
+
+
+    \end{axis}
+\end{tikzpicture}
+
+
+\hfill \break
+\begin{itemize}
+    \item $\textcolor{red}{\alpha},\textcolor{green}{\beta} \rightarrow$ Hähenwinkel, von der Horizontale aus nach oben gemessen.
+    \item $\textcolor{red}{\alpha},\textcolor{green}{\beta} \rightarrow$ Tiefenwinkel, von der Horizontale aus nach unten gemessen.
+    \item $\textcolor{red}{\gamma}... Horizontalwinkel$ zwischen den 2 gedachten Linien.
+    \item $\textcolor{green}{\delta}... Sehwinkel$ von 2 Sehstralen.
+\end{itemize}
+
+\newpage
+\input{Topics/Trigonometry/SubSubTopics/Beispiel1}
+\newpage
+\input{Topics/Trigonometry/SubSubTopics/Beispiel2}

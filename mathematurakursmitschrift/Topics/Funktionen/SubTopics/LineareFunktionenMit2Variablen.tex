@@ -1,0 +1,64 @@
+\newpage
+\subsection{Lineare Funktionen mit 2 Variablen}
+
+Jede lineare Gleichung lässt sich auf eine Faktorgleichung der Form $y=kx+d$ umformen.
+$$ax+by = c$$
+$$\downarrow$$
+$$y=\frac{c-ax}{b}$$
+
+\hfill \break
+Example:\\
+\fboxrule=0.8pt \fcolorbox{black}{lightgray}{%
+    \begin{tabular}[t]{@{}l@{}}
+        $x+y=5$ /-x \\
+        $y=5-x$     \\
+        $y=-x+5$    \\
+        $y=-1x+5$   \\
+    \end{tabular}}
+\begin{itemize}
+    \item $d=5$
+    \item $k=-1$
+\end{itemize}
+
+\hfill \break
+\begin{tikzpicture}[scale=1.0]
+    \begin{axis}%
+        [
+            grid=major,
+            xtick={-7,-6,...,7},
+            minor x tick num=4, % 4 minor ticks => 5 subintervals
+            xmin=-6,
+            xmax=6,
+            xlabel={\scriptsize $x$},
+            axis x line=middle,
+            ytick={-5,-4,...,6},
+            minor y tick num=4,  % 4 minor ticks => 5 subintervals
+            ymin=-1,
+            ymax=6,
+            ylabel={\scriptsize $f(x)$},
+            axis y line=middle,
+            no markers,
+            samples=100,
+            domain=-6:6,
+        ]
+        \addplot (x,{-1*x+5});
+    \end{axis}
+\end{tikzpicture}
+
+\hfill \break
+Lösungsverfahren:
+\begin{itemize}
+    \item Graphisch
+    \item Rechnerisches Gleichsetzungsverfahren
+    \item Rechnerisches Einsetzungsverfahren
+    \item Rechnerisches Eliminationsverfahren
+\end{itemize}
+
+\break
+\input{Topics/Funktionen/SubSubTopics/Gleichsetzungsverfahren}
+\break
+\input{Topics/Funktionen/SubSubTopics/Einsezuungsverfahren}
+\break
+\input{Topics/Funktionen/SubSubTopics/Eliminationsverfahren}
+\newpage
+\input{Topics/Funktionen/SubSubTopics/Sonderfaelle}
